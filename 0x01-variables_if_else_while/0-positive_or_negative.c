@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
- * main - Entry point
- * Description : assigns random value to n
- * Return : 0
+
+/**
+ * main - entry point
+ *
+ * Description: assigns random value to n
+ * Return: 0 success
  */
+
 int main(void)
 {
 	int n;
