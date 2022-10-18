@@ -1,4 +1,4 @@
-#include <main.h>
+#include <unistd.h>
 /**
  * main - prints _putchar
  * Return: 0 success
@@ -12,8 +12,9 @@ int main(void)
 	{
 		char c = str[i];
 
-		putchar(c);
+		_putchar(c);
 		i++;
 	}
+	_putchar('\n');
 	return (0);
 }
