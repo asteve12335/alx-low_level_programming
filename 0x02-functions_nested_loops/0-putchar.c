@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	char str[] = "_putchar";
+	char var[] = "_putchar";
 	int i;
 	int lenVar = sizeof(var) / sizeof(var[0]);
 
