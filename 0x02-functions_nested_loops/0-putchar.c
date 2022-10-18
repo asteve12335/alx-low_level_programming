@@ -6,15 +6,14 @@
 int main(void)
 {
 	char str[] = "_putchar";
-	int i = 0;
+	int i;
+	int lenVar = sizeof(var) / sizeof(var[0]);
 
-	while (str[i] != '\0')
+	for (i = 0; i < lenVar - 1; i++)
 	{
-		char c = str[i];
-
-		_putchar(c);
-		i++;
+		_putchar(var[i]);
 	}
 	_putchar('\n');
+
 	return (0);
 }
