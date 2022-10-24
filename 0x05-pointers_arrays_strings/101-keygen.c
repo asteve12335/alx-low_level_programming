@@ -3,13 +3,13 @@
 #include <time.h>
 
 /**
- * main - generates random password 
+ * main - generates random password
  * Return: void
  */
 int main(void)
 {
 	int sum;
-	char;
+	char p;
 
 	srand(time(NULL));
 	while (sum <= 2645)
