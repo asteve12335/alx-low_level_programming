@@ -10,6 +10,6 @@ void _puts(char *str);
 int _putchar(char);
 void print_rev(char *s);
 void rev_string(char *s);
-void puts(char *str);
+void puts2(char *str);
 
 #endif /*MAIN_H*/
