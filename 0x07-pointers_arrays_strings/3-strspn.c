@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		supposed_count++;
-		if (cont == 0 || count != supposed_count)
+		if (count == 0 || count != supposed_count)
 		{
 			break;
 		}
