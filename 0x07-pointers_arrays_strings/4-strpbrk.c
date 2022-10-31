@@ -1,4 +1,5 @@
-include "main.h"
+#include "main.h"
+
 /**
  * _strpbrk - searches for any set of bytes from string2 in string1
  * @s: string1
