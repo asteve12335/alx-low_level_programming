@@ -12,9 +12,9 @@ void print_diagsums(int *a, int size)
 {
 	int i, j, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < n; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (i == j)
 			{
@@ -23,11 +23,11 @@ void print_diagsums(int *a, int size)
 		}
 	}
 	j = 0;
-	while ((i >= 0) && (j < n))
+	while ((i >= 0) && (j < size))
 	{
-		sum2 = sum2 + a[x][y];
-		x--;
-		y++;
+		sum2 = sum2 + a[i][j];
+		i--;
+		j++;
 	}
 	printf("%d, %d", sum1, sum2);
 }
