@@ -11,16 +11,16 @@
  * Return: char array created
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char arr)
 {
+	char *array_alloc = malloc(size * sizeof(char));
 	unsigned int i;
-	char *str = malloc(size * sizeof(char));
 
-	if (size == 0)
+	if (size == 0 || array_alloc == NULL)
 		return (NULL);
+
 	for (i = 0; i < size; i++)
-	{
-		str[i] = c;
-	}
-	return (str);
+		array_alloc[i] = arr;
+
+	return (array_alloc);
 }
