@@ -11,7 +11,7 @@
  * Return: char array created
  */
 
-char *create_array(unsigned int size, char arr)
+char *create_array(unsigned int size, char c)
 {
 	char *array_alloc = malloc(size * sizeof(char));
 	unsigned int i;
@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char arr)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-		array_alloc[i] = arr;
+		array_alloc[i] = c;
 
 	return (array_alloc);
 }
