@@ -1,69 +1,35 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * string_nconcat - attaches n bytes of s2 to s1
- * @s1: string 1
- * @s2:string 2
- * @n: unsigned int
- * Return: Concatenated string
+ * string_nconcat - concatenate the first n bytes of a string to another
+ * @str1: pointer to the first string
+ * @str2: pointer to the second string
+ * @size: size of str2 to be concatenated
+ *
+ * Return: pointer to the concatenated string
  */
-
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *str1, char *str2, unsigned int size)
 {
-	unsigned int i, j, k = 0;
-	char *str;
+	unsigned int len1, len2;
+	char *ptr;
 
-	str = malloc(sizeof(*str) * (n + 1));
+	if (str1 == NULL)
+		str1 = "";
+	if (str2 == NULL)
+		str2 = "";
 
-	if (str == NULL)
-	{
+	len1 = strlen(str1);
+	len2 = strlen(str2) <= size ? strlen(str2) : size;
+	ptr = malloc(len1 + len2 + 1);
+
+	if (ptr == NULL)
 		return (NULL);
-	}
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+	strcpy(ptr, str1);
+	strncat(ptr, str2, size);
 
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-
-	if (n >= _strlen(s2))
-	{
-		s2 = s2;
-	}
-
-	for (i = 0; i < _strlen(s1); i++)
-	{
-		str[i] = s1[i];
-	}
-
-	for (j = _strlen(s1); j < (_strlen(s1) + n); j++)
-	{
-		str[j] = s2[k];
-		k++;
-	}
-	return (str);
-}
-
-
-/**
- * _strlen - gets the string length
- * @s: string
- * Return: unsigned integer
- */
-
-unsigned int _strlen(char *s)
-{
-	unsigned int count = 0;
-
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
+	return (ptr);
 }
