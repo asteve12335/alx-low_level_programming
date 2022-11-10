@@ -1,16 +1,18 @@
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * string_nconcat - attaches n bytes of s2 to s1
  * @s1: string 1
  * @s2:string 2
- * @n: integer
+ * @n: unsigned int
  * Return: Concatenated string
  */
 
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, k = 0;
+	unsigned int i, j, k = 0;
 	char *str;
 
 	str = malloc(_strlen(s1) + n + 1);
@@ -39,24 +41,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		str[i] = s1[i];
 	}
-	
+
 	for (j = _strlen(s1); j < (_strlen(s1) + n); j++)
 	{
 		str[j] = s2[k];
 		k++;
 	}
+	return (str);
 }
 
 
 /**
  * _strlen - gets the string length
  * @s: string
- * Return: integer
+ * Return: unsigned integer
  */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (s[count] != '\0')
 	{
