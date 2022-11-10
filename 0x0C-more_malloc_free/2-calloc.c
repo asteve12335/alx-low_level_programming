@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (arr == NULL)
 	{
-		return (NULL);
+		exit(0);
 	}
 	return (arr);
 }
