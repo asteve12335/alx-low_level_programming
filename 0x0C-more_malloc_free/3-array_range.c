@@ -27,12 +27,10 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	arr[0] = min;
-	arr[nmemb - 1] = max;
 
-	for (i = 1; arr[i] < max; i++)
+	for (;i < nmemb; i++)
 	{
-		arr[i] = arr[i - 1] + 1;
+		arr[i] = min++
 	}
 	return (arr);
 }
