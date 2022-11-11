@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 	}
 
 
-	for (;i < nmemb; i++)
+	for (; i < nmemb; i++)
 	{
 		arr[i] = min++;
 	}
