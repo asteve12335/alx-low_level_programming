@@ -12,7 +12,7 @@ int *array_range(int min, int max)
 	int *arr;
 	int nmemb, size, i = 0;
 
-	nmemb = max _ min + 1;
+	nmemb = max - min + 1;
 	size = sizeof(int);
 
 	if (min > max)
