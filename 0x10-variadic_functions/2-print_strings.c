@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+#include <stdlib.h>
 /**
  * print_strings - Prints a number followed by a separator
  * @separator: This is the string to separate the numbers
