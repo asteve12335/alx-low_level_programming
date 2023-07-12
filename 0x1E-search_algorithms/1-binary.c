@@ -11,7 +11,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	/* declare variables */
-	size_t left, right, mid, index;
+	size_t left, right, mid, i;
 
 	/* check if array is NULL */
 	if (array == NULL)
@@ -26,10 +26,10 @@ int binary_search(int *array, size_t size, int value)
 	{
 		/* print array */
 		printf("Searching in array: ");
-		for (index = left; index <= right; index++)
+		for (i = left; i <= right; i++)
 		{
-			printf("%d", array[index]);
-			if (index != right)
+			printf("%d", array[i]);
+			if (i != right)
 				printf(", ");
 		}
 		printf("\n");
